@@ -1,3 +1,13 @@
+/* Paleta de colores */
+:root {
+  --color-primary: #ffad08;
+  --color-secondary: #edd75a;
+  --color-tertiary: #73b06f;
+  --color-quaternary: #0c8f8f;
+  --color-quinary: #405059;
+}
+
+/* Estilos generales */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,39 +17,47 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-.favButton{
-  background-color: rgba(136, 136, 136, 0.116);
-  padding: 10px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
+/* Estilos para el tema claro */
+.light {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-h1{
-  text-align: center;
+.light a {
+  color: var(--color-quaternary);
 }
 
-nav{
+/* Estilos para el tema oscuro */
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark a {
+  color: var(--color-secondary);
+}
+
+/* Estilos del Navbar */
+nav {
   display: flex;
   width: 80vw;
   justify-content: flex-start;
   padding: 1rem;
+  background-color: var(--color-quaternary);
 }
 
-a{
-  color: #000;
+a {
+  color: #fff;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
 }
-a:hover{
-  color: rgb(136, 136, 136);
-} 
 
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Estilos del Footer */
 footer {
   display: flex;
   justify-content: center;
@@ -50,41 +68,40 @@ footer {
   width: 90%;
   height: 40px;
   margin-top: 2rem;
+  background-color: var(--color-quinary);
 }
 
-footer > img{
-  width: 200px;
-  margin: 0;
+footer > img {
+  background-color: #ffffff; /* Fondo blanco para el logo */
+  padding: 10px;
+  border-radius: 5px;
 }
-footer > p{
+
+footer > p {
   margin: 0;
   padding-top: 0.7rem;
+  color: var(--color-primary);
 }
 
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
-}
-
-.card{
+/* Estilos de la Card */
+.card {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  padding: 0.5rem;
+  border: 0.5px solid var(--color-primary);
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+.card:hover {
+  border: 0.5px solid var(--color-tertiary);
 }
 
-.card-grid{
+.card-grid {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -94,29 +111,234 @@ form{
   margin: 0 auto;
 }
 
-table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+/* Estilos del botón de favoritos */
+.favButton {
+  background-color: var(--color-tertiary);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+.favButton:hover {
+  background-color: var(--color-primary);
+  transition: background-color 0.3s;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  margin: 0 auto;
 }
 
-.dark{
-  background-color: #12121296;
-  color: white;
+/* Paleta de colores */
+:root {
+  --color-primary: #ffad08;
+  --color-secondary: #edd75a;
+  --color-tertiary: #73b06f;
+  --color-quaternary: #0c8f8f;
+  --color-quinary: #405059;
 }
-.dark > a {
-  color: white;
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos para el tema claro */
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light a {
+  color: var(--color-quaternary);
+}
+
+/* Estilos para el tema oscuro */
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark a {
+  color: var(--color-secondary);
+}
+
+/* Estilos del Navbar */
+nav {
+  display: flex;
+  width: 80vw;
+  justify-content: flex-start;
+  padding: 1rem;
+  background-color: var(--color-quaternary);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Estilos del Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 90%;
+  height: 40px;
+  margin-top: 2rem;
+  background-color: var(--color-quinary);
+}
+
+footer > img {
+  background-color: #ffffff; /* Fondo blanco para el logo */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+footer > p {
+  margin: 0;
+  padding-top: 0.7rem;
+  color: var(--color-primary);
+}
+
+/* Estilos de la Card */
+.card {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 0.5rem;
+  border: 0.5px solid var(--color-primary);
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  border: 0.5px solid var(--color-tertiary);
+}
+
+.card-grid {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 90vw;
+  height: auto;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+/* Estilos del botón de favoritos */
+.favButton {
+  background-color: var(--color-tertiary);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.favButton:hover {
+  background-color: var(--color-primary);
+  transition: background-color 0.3s;
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Efecto hover para la imagen del perfil */
+.profile-img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+/* Efecto hover para el botón "View Details" */
+.viewDetailsButton {
+  background-color: #4dbce9;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.viewDetailsButton:hover {
+  background-color: #26ade4;
+}
+
+/* Efecto hover para el botón "Remove from favs" */
+.removeButton {
+  background-color: #ffad08;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.removeButton:hover {
+  background-color: #edd75a;
+}
+
+/* Estilos para el tema claro */
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light a {
+  color: #000000; /* Asegúrate de que el color del texto en los enlaces sea negro o un color visible */
+}
+
+/* Estilos específicos para el Navbar en modo claro */
+.light nav a {
+  color: #000000; /* Color del texto en los enlaces del Navbar */
+}
+
+.light nav a:hover {
+  color: #4dbce9; /* Color de texto al pasar el cursor en el Navbar */
+}
+
+/* Estilos para el tema oscuro */
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark a {
+  color: #ffffff;
 }
